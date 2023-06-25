@@ -1,4 +1,5 @@
 # Dr. Byron González
+# Dr. Ezequiel López
 # http://cete.fausac.gt 
 
 
@@ -10,7 +11,7 @@ if(!require(agricolae)){install.packages("agricolae")}
 if(!require(dplyr)){install.packages("dplyr")}
 
 # Importar la tabla de datos "agua1"
-agua1<-read_excel("agua1.xlsx")
+agua1<-read_excel("agua_1.xlsx")
 head(agua1)
 attach(agua1)
 
@@ -31,13 +32,13 @@ h4<- graph.freq(pot, col="blue", frequency =3 , main="Densidad normal", density=
 normal.freq(h4, col="red", lty=4,lwd=2, frequency=3)
 dens1<-density(pot)
 plot(dens1)
-h5<- graph.freq(pot, frequency=1, axes=T)
 
 # En caso se requiera definir el número de clases
 # , nclass=7, main="frecuencia con 7 clases")
 
 # Construir una ojiva de Galton del tipo "menor que.." ------
 
+h5<- graph.freq(pot, frequency=1, axes=T)
 h6<-ogive.freq(h5,axes=T,type="b", xlab="Concentración de potasio", ylab="Fracción de muestras", main="Ojiva de Galton", col="red")
 round(table.freq(h5),3)
 stat.freq(h5)
