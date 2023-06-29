@@ -3,6 +3,7 @@
 # http://cete.fausac.gt 
 
 if(!require(car)){install.packages("car")}
+if(!require(tidyverse)){install.packages("tidyverse")}
 
 ## Generar 200 números aleatorios ------
 # Para la distribución normal con media=70 y sd=15
@@ -17,8 +18,22 @@ tail(data)
 # Gráfica de la distribución normal
 plot(density(data$normal), main = "Densidad: normal", col="red", lwd=3)
 
+# Gráfica de la distribución empírica acumulada para normal
+ggplot(data,aes(x=normal)) +
+  stat_ecdf(geom="step") +
+  stat_function(fun=pnorm,color="blue",args = list(75,15)) +
+  labs(title="Empírica normal vs teórica", y="densidad",x="x")
+
+
 # Gráfica de la distribución de Weibull
 plot(density(data$weib), main = "Densidad: Weibull", col="blue", lwd=3)
+
+# Gráfica de la distribución empírica acumulada para Weibull
+ggplot(data,aes(x=weib)) +
+  stat_ecdf(geom="step") +
+  stat_function(fun=pnorm,color="blue",args = list(75,15)) +
+  labs(title="Empírica Weibull vs teórica", y="densidad",x="x")
+
 
 # QQ plot para normal
 qqPlot(data$normal)
