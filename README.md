@@ -1,5 +1,4 @@
-# enp
+# ENP
 # Estadística no paramétrica
 # Dr. Byron González
-# Dr. Ezequiel López
-# http://cete.fausac.gt
+# http://byrong.cc
