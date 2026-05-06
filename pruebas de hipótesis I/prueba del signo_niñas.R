@@ -1,7 +1,6 @@
 # Dr. Byron González
-# Dr. Ezequiel López
-# http://cete.fausac.gt
-# Prueba del signo -------
+# http://byrong.cc
+#Prueba del signo -------
 
 # Importar la tabla de datos "niñas" -----
 
