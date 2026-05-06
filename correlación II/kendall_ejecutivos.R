@@ -1,6 +1,5 @@
 # Dr. Byron González
-# Dr. Ezequiel López
-# http://cete.fausac.gt
+# http://byrong.cc
 
 if(!require(Kendall)){install.packages("Kendall")}
 e1<-c(2,3,1,5,4)
