@@ -1,6 +1,5 @@
 # Dr. Byron González
-# Dr. Ezequiel López
-# http://cete.fausac.gt
+# http://byrong.cc
 
 # Construir la tabla de contingencia -----
 fert<-matrix(c(3,5,25,4), nrow = 2, 
